@@ -3,12 +3,14 @@
 <h1>Quiz: {{quiz.title}}</h1>
 {% for question in quiz.questions %}
     <ol>
-        <li>{{question.description}}</li>
-        {% for reponse in question.reponses %}
-        <ul>
-            <li>{{reponse.intitule}}</li>
-        </ul>
-        {% endfor %}
+        <li>
+            {{question.description}}
+            {% for reponse in question.reponses %}
+            <ul>
+                <li>{{reponse.intitule}}</li>
+            </ul>
+            {% endfor %}
+        </li>
     </ol>
     
 

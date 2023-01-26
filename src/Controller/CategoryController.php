@@ -22,12 +22,12 @@ class CategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/categories/{id}', name: 'app_category')]
+    #[Route('/categories/{id}', name: 'category_details')]
     public function single(ManagerRegistry $doctrine, $id): Response
     {
         $categoryRepository = $doctrine->getRepository(Category::class);
         $category = $categoryRepository->find($id);
-        return $this->render('category/index.html.twig', [
+        return $this->render('category/details.html.twig', [
             'controller_name' => 'CategoryController',
             'category' => $category
         ]);

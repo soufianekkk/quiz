@@ -5,7 +5,7 @@
 {% block body %}
     <ul>
         {% for category in categories %}
-        <li>{{category.title}}</li>
+        <li><a href="{{ path('category_details',{id: category.id})}}">{{category.title}}</li></a>
         {% endfor %}
     </ul>
 {% endblock %}
